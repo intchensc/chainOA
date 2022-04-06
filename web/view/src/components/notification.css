@@ -1,0 +1,12 @@
+.notification{position: fixed; z-index: 1010; width: 384px; max-width: calc(100vw - 32px); box-sizing: border-box; margin: 0; padding: 0; font-size: 14px}
+.notification-top-left{left: 0; top: 24px; bottom: auto; margin-left: 24px}
+.notification-top-right{right: 0; top: 24px; bottom: auto; margin-right: 24px}
+.notification-bottom-left{left: 0; top: auto; bottom: 24px; margin-left: 24px}
+.notification-bottom-right{right: 0; top: auto; bottom: 24px; margin-right: 24px}
+.notification-alert{left: 0; top: 16px; width: 100vw; max-width: 100vw; text-align: center; pointer-events: none;}
+
+.notice{position: relative; margin-bottom: 16px; padding: 16px 24px; overflow: hidden; line-height: 1.5; background: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, .15)}
+.notice-title{position: relative; font-weight: 300}
+.notice-close{position: absolute; top: 0; right: 0; cursor: pointer}
+
+.alert{position: relative; font-size: 16px; padding: 8px 16px; margin-bottom: 10px; color: rgb(133, 133, 133); background: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, .15); pointer-events: all;}

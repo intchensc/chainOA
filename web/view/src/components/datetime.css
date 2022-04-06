@@ -1,0 +1,22 @@
+.datepicker-year{margin: 0 auto; cursor: pointer}
+.datepicker-year td{width: 86px; height: 30px; padding: 4px; text-align: center; color: #333}
+.datepicker-year td:hover{background-color: #e0e0e0}
+.datepicker-year td.selected{color: #fff; background: #009688}
+
+.datepicker-month{margin: 0 auto; cursor: pointer}
+.datepicker-month td{width: 64px; height: 48px; padding: 4px; text-align: center; color: #333}
+.datepicker-month td:hover{background-color: #e0e0e0}
+.datepicker-month td.selected{color: #fff; background: #009688}
+
+.datepicker-day{margin: 0 auto; cursor: pointer}
+.datepicker-day th{font-weight: 500}
+.datepicker-day th, .datepicker-day td{width: 36px; height: 30px; padding: 4px; text-align: center; color: #333}
+.datepicker-day td:hover{background-color: #e0e0e0}
+.datepicker-day td.prev, .datepicker-day td.next{color: #d2d2d2}
+.datepicker-day td.selected{color: #fff; background: #009688}
+
+.datepicker-time ul{position: relative; display: inline-block; box-sizing: border-box; width: 78px; max-height: 180px; overflow: hidden; border: 1px solid #d2d2d2; border-left-width: 0; cursor: pointer}
+.datepicker-time ul:hover{overflow-y: auto}
+.datepicker-time ul:first-child{border-left-width: 1px}
+.datepicker-time li{line-height: 32px; text-align: left; padding-left: 26px}
+.datepicker-time li.selected{background: #009688}

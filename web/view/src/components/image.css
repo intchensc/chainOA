@@ -1,0 +1,5 @@
+.img{background: #fff; max-width: 100%; max-height: 100%}
+
+.imgviewer{position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 1000; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center}
+.imgviewer-close{position: absolute; top: 0; right: 0; width: 64px; height: 64px; font-size: 32px; padding-left: 24px; box-sizing: border-box; border-bottom-left-radius: 100%; background: rgba(0, 0, 0, 0.2)}
+.imgviewer-panel{max-width: calc(100% - 128px); max-height: calc(100% - 128px); border: 2px solid #fff; box-sizing: border-box; overflow: auto}

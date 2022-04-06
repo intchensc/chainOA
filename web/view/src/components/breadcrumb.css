@@ -1,0 +1,3 @@
+.breadcrumb-item{cursor: pointer; color: #6c757d}
+.breadcrumb-item:hover{color: #393D49}
+.breadcrumb>.breadcrumb-item:last-child{pointer-events: none; color: #393D49}

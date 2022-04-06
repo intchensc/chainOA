@@ -1,0 +1,7 @@
+.tab{text-align: left!important}
+.tab-nav{position: relative; left: 0; height: 40px; line-height: 40px; font-size: 14px; white-space: nowrap; border-bottom: 1px solid #e6e6e6; transition: all .2s}
+.tab-nav>li{display: inline-block; vertical-align: middle; position: relative; line-height: 39px; min-width: 65px; text-align: center; cursor: pointer; border-bottom: 2px solid transparent}
+.tab-nav>li:hover, .tab-nav>li.tab-active{color: #009688}
+.tab-nav>li.tab-active{border-bottom-color: #5FB878}
+.tab-pane{padding: 8px}
+.tab-hide{display: none}

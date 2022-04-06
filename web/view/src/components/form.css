@@ -1,0 +1,12 @@
+.form{display: block; padding: 8px}
+.form-field, .form-field-label, .form-field-control, .form-field-error{display: block}
+
+.form-field{margin-bottom: 16px}
+
+.form-field-label{font-size: 12px; font-weight: 500; color: #777; margin-bottom: 8px}
+.form-field-control{margin-bottom: 0.3em}
+.form-field-error{font-size: 11px; color: #FF5722}
+
+.form-field-invalid>.form-field-control .input, 
+.form-field-invalid>.form-field-control .password,
+.form-field-invalid>.form-field-control .select{border-color: #FF5722}

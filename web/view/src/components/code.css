@@ -1,0 +1,4 @@
+.code{position: relative; font-size: 12px; font-family: 'Courier New', Courier, monospace; display: block; margin: 10px 0; padding: 0; border: 1px solid #E2E2E2; border-left-width: 5px; background-color: #F2F2F2; color: #333}
+.code-title{padding: 0 10px; height: 32px; line-height: 32px; border-bottom: 1px solid #E2E2E2}
+.code-content{overflow: auto}
+.code-content>li{margin-left: 45px; line-height: 20px; padding: 0 4px; border-left: 1px solid #E2E2E2; list-style-type: decimal-leading-zero; background: white}

@@ -1,0 +1,4 @@
+.progress{display: inline-block; width: 100%; height: 28px; padding: 0 8px; box-sizing: border-box}
+.progress-bar{display: block; position: relative; height: 4px; top: 20px; background: #e2e2e2}
+.progress-value{position: absolute; top: -24px; text-align: center; cursor: pointer; transform: translate(50%, 0)}
+.progress-percent{position: absolute; top: 0; left: 0; height: 4px; background: #009688}

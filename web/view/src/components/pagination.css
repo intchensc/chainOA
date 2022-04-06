@@ -1,0 +1,5 @@
+.pagination{display: block; margin: 4px 0}
+.pagination>button{display: inline-block; vertical-align: middle; width: 24px; height: 24px; padding: 0 4px; white-space: nowrap; text-align: center; color: #393D49; font-size: 12px; background: none; border: 1px solid transparent; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none}
+.pagination>button:hover{color: #1E9FFF}
+.pagination>button:disabled{color: rgb(102, 106, 117)}
+.pagination>button.pagination-active{border: 1px solid #1E9FFF; color: #1E9FFF}

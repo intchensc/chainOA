@@ -1,0 +1,50 @@
+.signContainer {
+    background: #6c5438;
+    padding: 22px 16px 15px 16px;
+    height: 623px;
+    box-sizing: border-box;
+}
+.signContent {
+    position: relative;
+    border: black;
+    width: 100%;
+}
+.signTip {
+      color: #ccc;
+      font-size: 30px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+
+.canvasContainer {
+      border-radius: 10px;
+      background: #fff;
+  }
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+}
+.clearBtn {
+      width: 164px;
+      font-size: 18px;
+      color: #ac9374;
+      border-radius: 5px;
+      background: none;
+      border: 1px solid #ac9374;
+}
+.signBtn {
+      width: 164px;
+      margin-left: 15px;
+      font-size: 18px;
+      background: linear-gradient(135deg, #d8bb9a 0%, #8b6e4c 100%);
+      border-radius: 5px;
+      color: #fff;
+      border: none;
+
+}

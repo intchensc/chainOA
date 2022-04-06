@@ -1,0 +1,26 @@
+.markdown-viewer{overflow: auto; background: rgb(245, 245, 245); border: 1px solid #d2d2d2; border-left: none; box-sizing: border-box; padding: 4px}
+
+.markdown{color: #24292e; font-size: 16px}
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6{color: #4e4e4e; margin-top: 24px; margin-bottom: 12px; font-weight: 500}
+.markdown h1{font-size: 32px}
+.markdown h2{font-size: 24px}
+.markdown h3{font-size: 20px}
+.markdown h4{font-size: 16px}
+.markdown h5{font-size: 14px}
+.markdown h6{font-size: 12px}
+.markdown .code>h3{margin: 0}
+
+.markdown .task{list-style-type: none}
+.markdown .task+.markdown .task{margin-top: 4px}
+.markdown .task input{margin-right: 8px; vertical-align: middle}
+
+.markdown ul+ul, .markdown ol+ol, .markdown ul+ol, .markdown ol+ul{margin-top: 18px}
+.markdown li{margin-left: 20px}
+.markdown .code li{margin-left: 45px}
+
+.markdown table{width: 100%; margin: 8px 0px; background-color: #fff; color: #666; border: 1px solid #e6e6e6}
+.markdown table tr{transition: all .3s; -webkit-transition: all .3s}
+.markdown table th{font-weight: 400}
+.markdown table th, .markdown table td{position: relative; padding: 9px 15px; min-height: 20px; line-height: 20px; font-size: 14px; border-width: 1px; border-style: solid; border-color: #e6e6e6; border-top: none; border-left: none}
+.markdown table th:last-child, table td:last-child{border-right: none}
+.markdown table thead tr,.markdown table tbody tr:hover{background-color: #f2f2f2}

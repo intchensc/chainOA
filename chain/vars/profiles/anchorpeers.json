@@ -1,0 +1,24 @@
+{
+  "org0-example-com": {
+    "AnchorPeers": {
+      "mod_policy": "Admins",
+      "value": {
+        "anchor_peers": [
+           { "host": "192.168.1.107", "port": "7002" }
+        ]
+      },
+      "version": "0"
+    }
+  },
+  "org1-example-com": {
+    "AnchorPeers": {
+      "mod_policy": "Admins",
+      "value": {
+        "anchor_peers": [
+           { "host": "192.168.1.107", "port": "7003" }
+        ]
+      },
+      "version": "0"
+    }
+  }
+}

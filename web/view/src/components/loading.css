@@ -1,0 +1,4 @@
+.loading{position: fixed; z-index: 9999; left: 0; right: 0; top: 16px; font-size: 14px; text-align: center}
+.loading-tips{padding: 8px 16px; vertical-align: middle; color: #fff; background: rgba(0, 0, 0, .5)}
+.loading-anim{animation: loading-rotate 1.5s linear 0s infinite}
+@keyframes loading-rotate { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }

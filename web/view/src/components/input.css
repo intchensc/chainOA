@@ -1,0 +1,54 @@
+input:-internal-autofill-selected, textarea:-internal-autofill-selected, textarea:-internal-autofill-selected{box-shadow: 0 0 0px 1000px white inset}
+
+.input{display: inline-block; width: 100%; height: auto; border-width: 1px; border-style: solid; border-color: #d2d2d2; background-color: #fff; box-sizing: border-box}
+.input>input, .input>textarea{display: block; width: 100%; height: 100%; min-height: 26px; padding: 0 4px; margin: 0; color: #5c5c5c; border: none; box-sizing: border-box}
+.input>textarea{resize: none}
+
+.input-has-addon>input{display: inline-block; width: auto}
+.input-has-addon .btn{border: none; background: #dfdfdf}
+
+.checkbox{display: inline-block; cursor: pointer; height: 1em; line-height: 1em; margin-top: 2px}
+.checkbox+.checkbox{margin-left: 16px}
+.checkbox span{display: inline-block; vertical-align: middle; font-size: .6em; color: gray}
+.checkbox.disabled span{color: rgb(163, 163, 163)}
+
+.radio{display: inline-block; cursor: pointer; height: 24px; line-height: 24px; margin-top: 2px}
+.radio+.radio{margin-left: 16px}
+.radio>span{display: inline-block; vertical-align: middle; font-size: 14px}
+.radio.disabled>span{color: rgb(163, 163, 163)}
+.radio>i{display: inline-block; position: relative; width: 14px; height: 14px; margin-right: 6px; vertical-align: middle; background: #fff; color: #fff; border: 2px solid #cfcece; border-radius: 100%}
+.radio.checked>i{border-color: #5fb878}
+.radio.checked>i::after{content: ''; position: absolute; top: 2px; left: 2px; width: 10px; height: 10px; background: #5fb878; border-radius: 100%}
+.radio.disabled>i{background: #fff; border-color: rgb(197, 197, 197)}
+.radio.disabled.checked>i::after{content: ''; position: absolute; top: 2px; left: 2px; width: 10px; height: 10px; background: rgb(197, 197, 197); border-radius: 100%}
+
+.switch{display: inline-flex; box-sizing: border-box; justify-content: space-between; align-items: center; width: 54px; max-width: 54px; height: 22px; padding: 0 5px; margin-top: 3px; border: 1px solid #5fb878; border-radius: 20px; cursor: pointer; background-color: #5fb878; transition: .1s linear}
+.switch-status{display: inline-block; margin-top: 1px; color: #fff}
+.switch-indicator{display: inline-block; width: 14px; height: 14px; border-radius: 20px; background: #fff; transition: .1s linear}
+.switch-off{border-color: #d2d2d2; background: #fff}
+.switch-off .switch-status{color: #d2d2d2}
+.switch-off .switch-indicator{background: rgb(158, 158, 158)}
+.switch-disabled{opacity: .6}
+
+.slider{display: inline-block; width: 100%; height: 28px; padding: 0 8px; box-sizing: border-box}
+.slider-bar{display: block; position: relative; height: 4px; top: 20px; background: #e2e2e2}
+.slider-value{position: absolute; top: -24px; text-align: center; cursor: pointer; transform: translate(50%, 0)}
+.slider-progress{position: absolute; top: 0; left: 0; height: 4px; background: #009688}
+.slider-handle{position: absolute; top: -6px; width: 12px; height: 12px; background: #fff; border-radius: 100%; border: 2px solid #009688; transform: translate(50%, 0)}
+
+.password{display: inline-block; position: relative; height: 28px; width: 100%; border-width: 1px; border-style: solid; color: #5c5c5c; border-color: #d2d2d2; background-color: #fff; box-sizing: border-box}
+.password>.input-area{display: block; position: absolute; left: 4px; right: 36px; top: 0; bottom: 0}
+.password>.input-area>input{width: 100%; line-height: 26px; border: none}
+.password>span{display: block; position: absolute; top: 0; right: 4px; font-size: 24px}
+
+.select{display: inline-block; width: 100%; min-height: 28px; box-sizing: border-box; border-width: 1px; border-style: solid; border-color: #d2d2d2}
+.select>select{display: block; width: 100%; height: 100%; padding-left: 2px; color: #5c5c5c; border-color: transparent}
+.select>select>optgroup{color: #909090}
+.select>select option{color: black}
+
+.uploader{display: inline-block; cursor: pointer}
+.uploader:hover{color: #009688}
+.uploader-list{margin-top: 8px; display: flex; align-items: center}
+.uploader-item{padding: 4px 8px; font-size: 12px; color: #fff; background:#909090}
+.uploader-item+.uploader-item{margin-left: 8px}
+

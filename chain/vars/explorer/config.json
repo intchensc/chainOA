@@ -1,0 +1,9 @@
+{
+  "network-configs": {
+    "mysite": {
+      "name": "mysite",
+      "profile": "./connection-profile/mychannel_profile.json"
+    }
+  },
+  "license": "Apache-2.0"
+}

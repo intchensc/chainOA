@@ -1,0 +1,14 @@
+.tree{line-height: 30px; font-size: 14px}
+.tree-node{position: relative}
+.tree-node:before{content: ''; position: absolute; left: .5em; top: 24px; bottom: -4px; z-index: 0; width: 1px; background: #dadada}
+.tree-node:last-child:before{background: transparent}
+.tree-entry{display: block}
+.tree-icon, .tree-label{display: inline; vertical-align: middle}
+.tree-label{margin-left: 4px; padding: 2px 4px; color: rgba(0, 0, 0, 0.65)}
+.tree-label:hover{background: #e0e0e0}
+.tree-label.tree-selected{background: #bae7ff}
+.tree-child{padding-left: 20px}
+
+.tree-entry>.anchor>ul{position: absolute; left: 16px; top: 0; list-style: none; background: #fff; z-index: 500; box-shadow: 0 2px 4px rgba(0,0,0,.12); border: 1px solid #d2d2d2}
+.tree-entry>.anchor>ul>li{cursor: pointer; padding: 2px 8px}
+.tree-entry>.anchor>ul>li:hover{color: #009688}

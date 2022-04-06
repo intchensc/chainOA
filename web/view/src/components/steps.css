@@ -1,0 +1,13 @@
+.steps{font-size: 14px}
+.steps-header{display: flex; font-size: 24px; padding: 8px 0; box-sizing: border-box}
+.steps-nav{display: inline-block; flex: 1; margin-right: 16px; padding-right: 24px; list-style: none; color: #b5b5b5; white-space: nowrap; overflow: hidden}
+.steps-nav:last-child{flex: none; margin-right: 0}
+.steps-nav-active{color: #01AAED}
+.steps-nav-index{display: inline-block; vertical-align: middle; width: 24px; height: 24px; font-size: 16px; margin-right: 8px; padding: 0; border-radius: 100%; border: 1px solid #b5b5b5; vertical-align: middle}
+.steps-nav-active .steps-nav-index{border: 1px solid #01AAED; color: #fff; background: #01AAED}
+.steps-nav-label{position: relative; display: inline-block; vertical-align: middle; padding-right: 16px}
+.steps-nav-label:after{position: absolute; top: 16px; left: 100%; display: block; width: 9999px; height: 1px; background: #cccccc; content: ''}
+.steps-nav:last-child .steps-nav-label:after{content: none}
+
+.step{padding: 8px}
+.step-hide{display: none}

@@ -1,0 +1,6 @@
+.modal{position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 2000; display: flex; justify-content: center; align-items: center}
+.modal-mask{position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, .2)}
+.modal-dialog{max-width: calc(100% - 8px); max-height: calc(100% - 8px); z-index: 2001; background: #fff; border: 1px solid #e8e8e8; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0, 0, 0, .15)}
+.modal-header{font-size: 16px; font-weight: 500; padding: 8px; border-bottom: 1px solid #e8e8e8; display: flex; justify-content: space-between; align-items: center}
+.modal-body{padding: 8px}
+.modal-footer{padding: 8px; border-top: 1px solid #e8e8e8; display: flex; justify-content: flex-end; align-items: center}
