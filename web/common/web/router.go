@@ -74,7 +74,7 @@ func AssertError(err error) {
 	}
 }
 
-// Assert panics when test expr failed.
+// Assert panics when pdf expr failed.
 func Assert(expr bool, errMsg string) {
 	if !expr {
 		panic(errors.New(errMsg))

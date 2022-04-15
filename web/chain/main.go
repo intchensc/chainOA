@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-const (
-	ccID      = "contract"
-	channelID = "mychannel"
-	orgName   = "org1.example.com"
-	orgAdmin  = "Admin"
-)
-
 /*
 To run this app, make sure that one of the wallet files such as Admin.id from
 vars/profiles/vscode/wallets directory is copied onto ./wallets directory,

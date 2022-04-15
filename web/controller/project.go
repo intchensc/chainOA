@@ -64,9 +64,22 @@ func (*Project) getRecord(c *web.Context) {
 	}
 
 	fmt.Println(reflect.TypeOf(result))
-	fmt.Printf("The results is %v", result)
 
-	c.JSON(200, web.Map{"data": string(result)})
+	t := project.Record{}
+	_ = json.Unmarshal(result, &t)
+	list := []map[string]interface{}{}
+
+	for _, v := range t.Historys {
+		list = append(list, map[string]interface{}{
+			"owner":      v.Record.Owner,
+			"department": v.Record.Department,
+			"content":    v.Record.Content,
+			"uploader":   v.Record.Uploader,
+			"uploadTime": v.Record.UploadTime,
+		})
+	}
+	fmt.Printf("The results is %v", list)
+	c.JSON(200, web.Map{"data": list})
 }
 
 func (*Project) uploadRecord(c *web.Context) {
@@ -86,6 +99,7 @@ func (*Project) uploadRecord(c *web.Context) {
 		content,
 		uploader.Name,
 		uploadTime,
+		nil,
 	}
 
 	jsonRecord, err := json.Marshal(record)

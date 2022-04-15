@@ -10,9 +10,9 @@ export ORDERER_ADDRESS=192.168.1.107:7004
 export ORDERER_TLS_CA=/vars/keyfiles/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/ca.crt
 
 peer chaincode invoke -o $ORDERER_ADDRESS --isInit \
-  --cafile $ORDERER_TLS_CA --tls -C mychannel -n record \
+  --cafile $ORDERER_TLS_CA --tls -C mychannel -n contract \
   --peerAddresses 192.168.1.107:7002 \
   --tlsRootCertFiles /vars/keyfiles/peerOrganizations/org0.example.com/peers/peer1.org0.example.com/tls/ca.crt \
   --peerAddresses 192.168.1.107:7003 \
   --tlsRootCertFiles /vars/keyfiles/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt \
-  -c '{"Args":[ "QueryRecord","Jack" ]}' --waitForEvent
+  -c '{"Args":[ "init","a","200","b","300" ]}' --waitForEvent

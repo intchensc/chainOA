@@ -360,7 +360,6 @@ func (*Task) addComment(c *web.Context) {
 	uid := c.Session.Get("uid").(int64)
 	tid := c.RouteValue("id").MustInt("")
 	content := c.PostFormValue("content").MustString("任务内容不可为空")
-
 	t := task.Find(tid)
 	web.Assert(t != nil, "任务不存在或已被删除")
 	web.AssertError(t.AddComment(uid, content))

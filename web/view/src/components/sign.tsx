@@ -4,17 +4,40 @@ import * as React from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 // @ts-ignore
 import styles from './sign.css';
+import {request} from "../common/request";
+import {Notification} from "./notification";
+interface item{
+    url:string
+    id :number
+}
 
-const SignPage = () => {
+const SignPage = (props: item) => {
     const [signImg, setSignImg] = React.useState('');
     const [signTip, setSignTip] = React.useState('请签名');
-
+    const {url,id} = props
     let sigCanvas: any;
     const clearSign = () => {
         sigCanvas.clear();
     };
     const handleSign = () => {
-        setSignImg(sigCanvas.toDataURL('image/png'));
+        setSignImg(sigCanvas.toDataURL());
+        console.log("url:"+url)
+        upSign()
+    };
+
+    const upSign = () => {
+        request({
+            url: `/api/file/share/sign`,
+            method: 'POST',
+            data:{
+                "url":url,
+                "id":id,
+                "img":signImg
+            },
+            success: () => {
+                Notification.alert('签署成功', 'info');
+            }
+        })
     };
 
     return (

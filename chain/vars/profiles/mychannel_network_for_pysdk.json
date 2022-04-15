@@ -3,7 +3,7 @@
   "description": "Generated network configuration file",
   "version": "0.1",
   "client": {
-    "organization": "org0.example.com",
+    "organization": "org1.example.com",
     "credentialStore": {
       "path": "/tmp/hfc-kvs",
       "cryptoStore": {

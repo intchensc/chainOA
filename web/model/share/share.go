@@ -23,6 +23,37 @@ type (
 	}
 )
 
+func SetIPFS(string2 string, id int64) error {
+	//rows, err := orm.Query("SELECT * FROM `share` WHERE path=\"" + path + "\"")
+	fmt.Println("IDDDDD:", id)
+	file := &Share{ID: id}
+	err := orm.Read(file)
+	if err != nil {
+		fmt.Println("选择更新出错", err)
+	}
+	file.Ipfs = string2
+	err = orm.Update(file)
+	if err != nil {
+		fmt.Println("更新数据出错")
+	}
+	//fmt.Printf("rows:%q\n\n\n", rows)
+	//defer rows.Close()
+	//for rows.Next() {
+	//	one := &Share{}
+	//	if err = orm.Scan(rows, one); err != nil {
+	//		return err
+	//	}
+	//	one.Ipfs = string2
+	//	fmt.Println("one--->>>>>", one)
+	//	err := orm.Update(one)
+	//	if err != nil {
+	//		fmt.Println(err)
+	//		return err
+	//	}
+	//}
+	return nil
+}
+
 // GetAll returns all shared files.
 func GetAll(uid int64) ([]map[string]interface{}, error) {
 	suid := strconv.FormatInt(uid, 10)
@@ -54,6 +85,7 @@ func GetAll(uid int64) ([]map[string]interface{}, error) {
 			"ipfs":    one.Ipfs,
 		})
 	}
+	fmt.Printf("The 1 is %v", list)
 
 	return list, nil
 }

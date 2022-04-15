@@ -9,7 +9,7 @@ export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/org0.example.com
 export ORDERER_ADDRESS=192.168.1.107:7004
 export ORDERER_TLS_CA=/vars/keyfiles/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/ca.crt
 SID=$(peer lifecycle chaincode querycommitted -C mychannel -O json \
-  | jq -r '.chaincode_definitions|.[]|select(.name=="record")|.sequence' || true)
+  | jq -r '.chaincode_definitions|.[]|select(.name=="contract")|.sequence' || true)
 
 if [[ -z $SID ]]; then
   SEQUENCE=1
@@ -18,7 +18,7 @@ else
 fi
 
 peer lifecycle chaincode commit -o $ORDERER_ADDRESS --channelID mychannel \
-  --name record --version 1.0 --sequence $SEQUENCE \
+  --name contract --version 1.0 --sequence $SEQUENCE \
   --peerAddresses 192.168.1.107:7002 \
   --tlsRootCertFiles /vars/keyfiles/peerOrganizations/org0.example.com/peers/peer1.org0.example.com/tls/ca.crt \
   --peerAddresses 192.168.1.107:7003 \

@@ -19,7 +19,7 @@ fabric:
   goproxy: "https://goproxy.cn,direct"
   ### set the endpoint address to override the automatically detected IP address
   ### could be a public IP address or a dns name
-  # endpoint_address: 104.196.45.144
+  #endpoint_address: 127.0.0.1
   ### set the docker network name to override the automatically generated name.
   netname: "mysite"
   ### set the extra optins for docker run command

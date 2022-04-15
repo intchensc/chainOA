@@ -9,13 +9,13 @@ export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/org0.example.com
 export ORDERER_ADDRESS=192.168.1.107:7004
 export ORDERER_TLS_CA=/vars/keyfiles/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/ca.crt
 
-peer lifecycle chaincode queryinstalled -O json | jq -r '.installed_chaincodes | .[] | select(.package_id|startswith("record_1.0:"))' > ccstatus.json
+peer lifecycle chaincode queryinstalled -O json | jq -r '.installed_chaincodes | .[] | select(.package_id|startswith("contract_1.0:"))' > ccstatus.json
 
 PKID=$(jq '.package_id' ccstatus.json | xargs)
 REF=$(jq '.references.mychannel' ccstatus.json)
 
 SID=$(peer lifecycle chaincode querycommitted -C mychannel -O json \
-  | jq -r '.chaincode_definitions|.[]|select(.name=="record")|.sequence' || true)
+  | jq -r '.chaincode_definitions|.[]|select(.name=="contract")|.sequence' || true)
 if [[ -z $SID ]]; then
   SEQUENCE=1
 elif [[ -z $REF ]]; then
@@ -31,11 +31,11 @@ export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/org0.example.com
 export CORE_PEER_ADDRESS=192.168.1.107:7002
 
 # approved=$(peer lifecycle chaincode checkcommitreadiness --channelID mychannel \
-#   --name record --version 1.0 --init-required --sequence $SEQUENCE --tls \
+#   --name contract --version 1.0 --init-required --sequence $SEQUENCE --tls \
 #   --cafile $ORDERER_TLS_CA --output json | jq -r '.approvals.org0-example-com')
 
 # if [[ "$approved" == "false" ]]; then
-  peer lifecycle chaincode approveformyorg --channelID mychannel --name record \
+  peer lifecycle chaincode approveformyorg --channelID mychannel --name contract \
     --version 1.0 --package-id $PKID \
   --init-required \
     --sequence $SEQUENCE -o $ORDERER_ADDRESS --tls --cafile $ORDERER_TLS_CA
@@ -47,11 +47,11 @@ export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/org1.example.com
 export CORE_PEER_ADDRESS=192.168.1.107:7003
 
 # approved=$(peer lifecycle chaincode checkcommitreadiness --channelID mychannel \
-#   --name record --version 1.0 --init-required --sequence $SEQUENCE --tls \
+#   --name contract --version 1.0 --init-required --sequence $SEQUENCE --tls \
 #   --cafile $ORDERER_TLS_CA --output json | jq -r '.approvals.org1-example-com')
 
 # if [[ "$approved" == "false" ]]; then
-  peer lifecycle chaincode approveformyorg --channelID mychannel --name record \
+  peer lifecycle chaincode approveformyorg --channelID mychannel --name contract \
     --version 1.0 --package-id $PKID \
   --init-required \
     --sequence $SEQUENCE -o $ORDERER_ADDRESS --tls --cafile $ORDERER_TLS_CA

@@ -10,6 +10,7 @@ import (
 )
 
 type (
+
 	// Project schema
 	Project struct {
 		ID   int64  `json:"id"`
@@ -31,6 +32,20 @@ type (
 		Desc      string    `json:"desc"`
 	}
 
+	Record struct {
+		Owner      string `json:"owner"`
+		Department string `json:"department"`
+		Content    string `json:"content"`
+		Uploader   string `json:"uploader"`
+		UploadTime string `json:"uploadTime"`
+		Historys   []HistoryItem
+	}
+
+	HistoryItem struct {
+		TxId   string
+		Record Record
+	}
+
 	// Member schema
 	Member struct {
 		ID      int64 `json:"id"`
@@ -41,14 +56,6 @@ type (
 
 		// Runtime data
 		User *user.User `json:"user" orm:"-"`
-	}
-
-	Record struct {
-		Owner      string //档案所有人
-		Department string //所属部门
-		Content    string //档案内容
-		Uploader   string //上传人
-		UploadTime string //时间
 	}
 )
 

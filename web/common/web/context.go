@@ -69,7 +69,6 @@ func (c *Context) BodyAsJSON(to interface{}) error {
 	if err != nil {
 		return err
 	}
-
 	return json.Unmarshal(buf, to)
 }
 

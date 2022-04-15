@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	ccID      = "contract"
+	ccID      = "samplecc"
 	channelID = "mychannel"
 	orgName   = "org1.example.com"
 	orgAdmin  = "Admin"
@@ -201,16 +201,31 @@ func useWalletGateway() {
 		fmt.Printf("Failed to get network: %v", err)
 	}
 
-	contract := network.GetContract("contract")
-	result, err := contract.SubmitTransaction("CreateContract", "就业合同","学校","学生","c:/user/data","ipfs2","2022-2-2")
-	if err != nil {
-		fmt.Printf("Failed to commit transaction: %v", err)
-	} else {
-		fmt.Println("Commit is successful")
-	}
+	var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
+	contract := network.GetContract("samplecc")
+	uuid.SetRand(nil)
 
-	fmt.Println(reflect.TypeOf(result))
-	fmt.Printf("The results is %v", result)
+	var wg sync.WaitGroup
+	start := time.Now()
+	for i := 1; i <= 10; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			seededRand.Intn(20)
+			result, err := contract.SubmitTransaction("invoke", "put", uuid.New().String(),
+				strconv.Itoa(seededRand.Intn(20)))
+			if err != nil {
+				fmt.Printf("Failed to commit transaction: %v", err)
+			} else {
+				fmt.Println("Commit is successful")
+			}
+
+			fmt.Println(reflect.TypeOf(result))
+			fmt.Printf("The results is %v", result)
+		}()
+	}
+	wg.Wait()
+	fmt.Println("The time took is ", time.Now().Sub(start))
 }
 
 func main() {

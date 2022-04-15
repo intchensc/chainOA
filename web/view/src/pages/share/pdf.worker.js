@@ -134,7 +134,7 @@ class WorkerMessageHandler {
     }
 
     if (typeof ReadableStream === "undefined") {
-      const partialMsg = "The browser/environment lacks native support for critical " + "functionality used by the PDF.js library (e.g. `ReadableStream`); ";
+      const partialMsg = "The browser/environment lacks native support for critical " + "functionality used by the pdf.js library (e.g. `ReadableStream`); ";
 
       if (_is_node.isNodeJS) {
         throw new Error(partialMsg + "please use a `legacy`-build instead.");
@@ -4124,7 +4124,7 @@ class PDFDocument {
     }
 
     if (stream.length <= 0) {
-      throw new _util.InvalidPDFException("The PDF file is empty, i.e. its size is zero bytes.");
+      throw new _util.InvalidPDFException("The pdf file is empty, i.e. its size is zero bytes.");
     }
 
     this.pdfManager = pdfManager;
@@ -72277,7 +72277,7 @@ class XRef {
     if (!recoveryMode) {
       trailerDict = this.readXRef();
     } else {
-      (0, _util.warn)("Indexing all PDF objects");
+      (0, _util.warn)("Indexing all pdf objects");
       trailerDict = this.indexObjects();
     }
 
@@ -72786,7 +72786,7 @@ class XRef {
       return this.topDict;
     }
 
-    throw new _util.InvalidPDFException("Invalid PDF structure.");
+    throw new _util.InvalidPDFException("Invalid pdf structure.");
   }
 
   readXRef(recoveryMode = false) {

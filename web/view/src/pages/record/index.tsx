@@ -6,9 +6,8 @@ import {Record} from '../../common/protocol';
 import { request } from '../../common/request';
 
 export const RecordPage = () => {
-    const [isUploading, setIsUploading] = React.useState<boolean>(false);
     const [progress, setProgress] = React.useState<number>(0);
-    const [records, setRecord] = React.useState<[]>([]);
+    const [records, setRecord] = React.useState<Record[]>([]);
 
     React.useEffect(() => fetchAll(), []);
 
@@ -22,19 +21,20 @@ export const RecordPage = () => {
 
     const fetchAll = () => {
         request({url: '/api/project/getRecord',  method: 'GET', success: setRecord});
+        console.log(records)
     };
 
 
 
     return (
         <div className='m-4'>
-            {isUploading&&(
+            {(
                 <div>
                     <Progress percent={progress}/>
                 </div>
             )}
-            {records}
-            {/*<Table dataSource={records} columns={schema} pagination={15}/>*/}
+            {/*{records}*/}
+            <Table dataSource={records} columns={schema} pagination={15}/>
         </div>
     );
 };
